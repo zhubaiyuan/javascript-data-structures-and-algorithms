@@ -27,7 +27,7 @@ function exampleCubic(n) {
 }
 
 function exampleLogarithmic(n) {
-    for (var i = 1; i < n; i=i*2) {
+    for (var i = 1; i < n; i = i * 2) {
         console.log(i);
     }
 }
@@ -38,60 +38,60 @@ exampleCubic(3);
 exampleLogarithmic(100);
 
 //------------------------------------- Coefficient Rule: “Get Rid of Constants”
-function a(n){
-    var count =0;
-    for (var i=0;i<n;i++){
-        count+=1;
+function a(n) {
+    var count = 0;
+    for (var i = 0; i < n; i++) {
+        count += 1;
     }
     return count;
 }
 
-function a(n){
-    var count =0;
-    for (var i=0;i<5*n;i++){
-        count+=1;
+function a(n) {
+    var count = 0;
+    for (var i = 0; i < 5 * n; i++) {
+        count += 1;
     }
     return count;
 }
 
-function a(n){
-    var count =0;
-    for (var i=0;i<n;i++){
-        count+=1;
+function a(n) {
+    var count = 0;
+    for (var i = 0; i < n; i++) {
+        count += 1;
     }
-    count+=3;
+    count += 3;
     return count;
 }
 
 //---------------------------------------------------- Sum Rule: “Add Big-Os Up”
-function a(n){
-    var count =0;
-    for (var i=0;i<n;i++){
-        count+=1;
+function a(n) {
+    var count = 0;
+    for (var i = 0; i < n; i++) {
+        count += 1;
     }
-    for (var i=0;i<5*n;i++){
-        count+=1;
+    for (var i = 0; i < 5 * n; i++) {
+        count += 1;
     }
     return count;
 }
 
 //---------------------------------------------- Product Rule: “Multiply Big-Os”
-function a(n){
-    var count =0;
-    for (var i=0;i<n;i++){
-        count+=1;
-        for (var i=0;i<5*n;i++){
-            count+=1;
+function a(n) {
+    var count = 0;
+    for (var i = 0; i < n; i++) {
+        count += 1;
+        for (var i = 0; i < 5 * n; i++) {
+            count += 1;
         }
     }
     return count;
 }
 
 //----------------------------------- Polynomial Rule: “Big-O to the Power of k”
-function a(n){
-    var count =0;
-    for (var i=0;i<n*n;i++){
-        count+=1;
+function a(n) {
+    var count = 0;
+    for (var i = 0; i < n * n; i++) {
+        count += 1;
     }
     return count;
 }
@@ -104,11 +104,9 @@ function someFunction(n) {
         }
     }
 }
-// 'answer: O(n^2)'
 
 // ---------------------------------------------------------- Exercise 2, O(n^3)
 function someFunction(n) {
-
     for (var i = 0; i < n; i++) {
         for (var j = 0; j < n; j++) {
             for (var k = 0; k < n; k++) {
@@ -118,16 +116,13 @@ function someFunction(n) {
             }
         }
     }
-
 }
 
 // ------------------------------------------------------------ Exercise 3, O(1)
-function someFunction(n) {
-
+function someFunction() {
     for (var i = 0; i < 1000; i++) {
         console.log("hi");
     }
-
 }
 
 // ------------------------------------------------------------ Exercise 4, O(n)
@@ -146,7 +141,7 @@ function someFunction(n) {
 
 // ------------------------------------------------------------ Exercise 6, O(∞)
 function someFunction(n) {
-    while (true){
+    while (true) {
         console.log(n);
     }
 }
