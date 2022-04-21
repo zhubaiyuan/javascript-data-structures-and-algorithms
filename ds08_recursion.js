@@ -2,10 +2,12 @@
 function countDownToZero(n) {
     // base case. Stop at 0
     if (n <= -1) {
-        return; // stop the function
+        return; 
+        // stop the function
     } else {
         console.log(n);
-        countDownToZero(n - 1); // count down 1
+        countDownToZero(n - 1); 
+        // count down 1
     }
 }
 
@@ -101,7 +103,8 @@ function base10ToString(n) {
     return binaryString;
 }
 
-console.log(base10ToString(232)); // 11101000
+console.log(base10ToString(232)); 
+// 11101000
 
 // -------------------------------------------PRINT ALL PERMUTATIONS OF AN ARRAY
 function swap(strArr, index1, index2) {
@@ -180,8 +183,13 @@ function isPalindromeHelper(word, beginPos, endPos) {
     }
 }
 
-isPalindromeRecursive('hi'); // false
-isPalindromeRecursive('iii'); // true
-isPalindromeRecursive('ii'); // true
-isPalindromeRecursive('aibohphobia'); // true
-isPalindromeRecursive('racecar'); // true
+isPalindromeRecursive('hi'); 
+// false
+isPalindromeRecursive('iii'); 
+// true
+isPalindromeRecursive('ii'); 
+// true
+isPalindromeRecursive('aibohphobia'); 
+// true
+isPalindromeRecursive('racecar'); 
+// true
