@@ -1,120 +1,149 @@
 // ---------------------------------------------Global Declaration: Global Scope
 test = "sss";
-console.log(test); // prints "sss"
+console.log(test);
+// prints "sss"
 
 // ---------------------------------------Declaration with var: Functional Scope
-function scope1(){
+function scope1() {
     var top = "top";
     bottom = "bottom";
     console.log(bottom);
     var bottom;
 }
-scope1(); // prints "bottom" - no error
 
-function scope1(){
+scope1();
+// prints "bottom" - no error
+
+function scope1() {
     var top = "top";
     var bottom;
     bottom = "bottom";
     console.log(bottom);
 }
-scope1(); // prints "bottom" - no error
+
+scope1();
+// prints "bottom" - no error
 
 function scope2(print) {
     if (print) {
-        var insideIf = '12';
+        var insideIf = "12";
     }
     console.log(insideIf);
 }
-scope2(true); // prints '12' - no error
+
+scope2(true);
+// prints '12' - no error
 
 function scope2(print) {
     var insideIf;
     if (print) {
-        insideIf = '12';
+        insideIf = "12";
     }
     console.log(insideIf);
 }
-scope2(true); // prints '12' - no error
+
+scope2(true);
+// prints '12' - no error
 
 var a = 1;
+
 function four() {
     if (true) {
         var a = 4;
     }
-    console.log(a); // prints '4'
+    console.log(a);
+    // prints '4'
 }
+
 four();
 
 // --------------------------------------------Declaration with let: Block Scope
 function scope3(print) {
     if (print) {
-        let insideIf = '12';
+        let insideIf = "12";
     }
     console.log(insideIf);
 }
-scope3(true); // prints ''
+
+scope3(true);
+// prints ''
 
 // ---------------------------------------------------------------Variable Types
-var is20 = false; // boolean
-typeof is20; // boolean
+var is20 = false;
+// boolean
+typeof is20;
+// boolean
 
 var age = 19;
-typeof age; // number
+typeof age;
+// number
 
 var lastName = "Bae";
-typeof lastName; // string
+typeof lastName;
+// string
 
 var fruits = ["Apple", "Banana", "Kiwi"];
-typeof fruits; // object
+typeof fruits;
+// object
 
-var me = {firstName:"Sammie", lastName:"Bae"};
-typeof me; // object
+var me = { firstName: "Sammie", lastName: "Bae" };
+typeof me;
+// object
 
 var nullVar = null;
-typeof nullVar; // object
+typeof nullVar;
+// object
 
-var function1 = function(){
-	console.log(1);
-}
-typeof function1 // function
+var function1 = function () {
+    console.log(1);
+};
+typeof function1;
+// function
 
 var blank;
-typeof blank; // undefined
+typeof blank;
+// undefined
 
 // ----------------------------------------------------------Truthy/Falsey Check
-// Truthy/falsey check
 if (node) {
 }
 
-var printIfTrue = '';
+var printIfTrue = "";
 if (printIfTrue) {
-    console.log('truthy');
+    console.log("truthy");
 } else {
-    console.log('falsey'); // prints 'falsey'
+    console.log("falsey");
+    // prints 'falsey'
 }
 
 // --------------------------------------------------------------------=== vs ==
-"5" == 5 // returns true
-"5" === 5 // returns false
+"5" == 5;
+// returns true
+"5" === 5;
+// returns false
 
 // ----------------------------------------------------------------------Objects
 var o1 = {};
 var o2 = {};
 
-o1 == o2 // returns false
-o1 === o2 // returns false
+o1 == o2;
+// returns false
+o1 === o2;
+// returns false
 
 var o1 = {};
 var o2 = o1;
 
-o1 == o2 // returns true
-o1 === o2 // returns true
+o1 == o2;
+// returns true
+o1 === o2;
+// returns true
 
 function isEquivalent(a, b) {
     // arrays of property names
     var aProps = Object.getOwnPropertyNames(a);
     var bProps = Object.getOwnPropertyNames(b);
-    // If their property lengths are different, they're different objects 
+    // If their property lengths are different, they're different objects
     if (aProps.length != bProps.length) {
         return false;
     }
@@ -128,15 +157,24 @@ function isEquivalent(a, b) {
     // If everything matched, correct
     return true;
 }
-isEquivalent({'hi':12},{'hi':12}); // returns true
 
-var obj1 = {'prop1': 'test','prop2': function (){} };
-var obj2 = {'prop1': 'test','prop2': function (){} };
+isEquivalent({ hi: 12 }, { hi: 12 });
+// returns true
 
-isEquivalent(obj1,obj2); // returns false
+var obj1 = { prop1: "test", prop2: function () {} };
+var obj2 = { prop1: "test", prop2: function () {} };
 
-var function1 = function(){console.log(2)};
-var function2 = function(){console.log(2)};
-console.log(function1 == function2); // prints 'false'
+isEquivalent(obj1, obj2);
+// returns false
 
-void 0 === undefined; // true
+var function1 = function () {
+    console.log(2);
+};
+var function2 = function () {
+    console.log(2);
+};
+console.log(function1 == function2);
+// prints 'false'
+
+void 0 === undefined;
+// true
