@@ -1,53 +1,60 @@
 // -----------------------------------------------------------Introducing Arrays
-var array1 = [1,2,3,4];
+var array1 = [1, 2, 3, 4];
 
 // --------------------------------------------------------------------Insertion
-array1  = [1,2,3,4];
-array1.push(5); // array1 = [1,2,3,4,5]
-array1.push(7); // array1 = [1,2,3,4,5,7]
-array1.push(2); // array1 = [1,2,3,4,5,7,2]
+array1 = [1, 2, 3, 4];
+array1.push(5);
+// array1 = [1,2,3,4,5]
+array1.push(7);
+// array1 = [1,2,3,4,5,7]
+array1.push(2);
+// array1 = [1,2,3,4,5,7,2]
 console.log(array1);
 
 // ---------------------------------------------------------------------Deletion
-array1  = [1,2,3,4];
-array1.pop(); //returns 4, array1 = [1,2,3]
-array1.pop(); //returns 3, array1 = [1,2]
+array1 = [1, 2, 3, 4];
+array1.pop();
+//returns 4, array1 = [1,2,3]
+array1.pop();
+//returns 3, array1 = [1,2]
 
-array1  = [1,2,3,4];
-array1.shift(); //returns 1, array1 = [2,3,4]
-array1.shift(); //returns 2, array1 = [3,4]
+array1 = [1, 2, 3, 4];
+array1.shift();
+//returns 1, array1 = [2,3,4]
+array1.shift();
+//returns 2, array1 = [3,4]
 
 // -----------------------------------------------------------------------Access
-array1  = [1,2,3,4];
+array1 = [1, 2, 3, 4];
 console.log(array1[0]); //returns 1
 console.log(array1[1]); //returns 2
 
 // -------------------------------------for (Variables; Condition; Modification)
-for ( var i=0; i<array1.length; i++ ) {
+for (var i = 0; i < array1.length; i++) {
     // insert code here
 }
 
-var counter=0;
-while(counter<array1.length){
+var counter = 0;
+while (counter < array1.length) {
     // insert code here
     counter++;
 }
 
 breakCondition = true;
-while(true){
+while (true) {
     if (breakCondition) {
         break;
     }
 }
 
-for ( ; ;) {
+for (;;) {
     if (breakCondition) {
-        break
+        break;
     }
 }
 
 // -------------------------------------------------------------------for ( in )
-var array1 = ['all','cows','are','big'];
+var array1 = ["all", "cows", "are", "big"];
 
 for (var index in array1) {
     console.log(index);
@@ -63,100 +70,128 @@ for (var element of array1) {
 }
 
 // -------------------------------------------------------------------forEach( )
-var array1 = ['all','cows','are','big'];
+var array1 = ["all", "cows", "are", "big"];
 
-array1.forEach( function (element, index){
+array1.forEach(function (element, index) {
     console.log(element);
 });
 
-array1.forEach( function (element, index){
+array1.forEach(function (element, index) {
     console.log(array1[index]);
 });
 
 // ------------------------------------------------------------.slice(begin,end)
-var array1  = [1,2,3,4];
-array1.slice(1,2); //returns [2], array1  = [1,2,3,4]
-array1.slice(2,4); //returns [3,4], array1  = [1,2,3,4]
+var array1 = [1, 2, 3, 4];
+array1.slice(1, 2);
+//returns [2], array1  = [1,2,3,4]
+array1.slice(2, 4);
+//returns [3,4], array1  = [1,2,3,4]
 
-array1.slice(1);   //returns [2,3,4], array1  = [1,2,3,4]
-array1.slice(1,4); //returns [2,3,4], array1  = [1,2,3,4]
+array1.slice(1);
+//returns [2,3,4], array1  = [1,2,3,4]
+array1.slice(1, 4);
+//returns [2,3,4], array1  = [1,2,3,4]
 
-array1.slice(); //returns [1,2,3,4], array1 = [1,2,3,4]
+array1.slice();
+//returns [1,2,3,4], array1 = [1,2,3,4]
 
-var array1 = [1,2,3,4],
+var array1 = [1, 2, 3, 4],
     array2 = array1;
 
-console.log(array1); // [1,2,3,4]
-console.log(array2); // [1,2,3,4]
+console.log(array1);
+// [1,2,3,4]
+console.log(array2);
+// [1,2,3,4]
 
 array2[0] = 5;
 
-console.log(array1); // [5,2,3,4]
-console.log(array2); // [5,2,3,4]
+console.log(array1);
+// [5,2,3,4]
+console.log(array2);
+// [5,2,3,4]
 
-var array1 = [1,2,3,4];
+var array1 = [1, 2, 3, 4];
 var array2 = array1.slice();
 
-console.log(array1); // [1,2,3,4]
-console.log(array2); // [1,2,3,4]
+console.log(array1);
+// [1,2,3,4]
+console.log(array2);
+// [1,2,3,4]
 
 array2[0] = 5;
 
-console.log(array1); // [1,2,3,4]
-console.log(array2); // [5,2,3,4]
+console.log(array1);
+// [1,2,3,4]
+console.log(array2);
+// [5,2,3,4]
 
 // -------------------------------------.splice(begin,size,element1,element2...)
-var array1 = [1,2,3,4];
-array1.splice(); //returns [], array1 = [1,2,3,4]
-array1.splice(1,2); //returns [2,3], array1 = [1,4]
+var array1 = [1, 2, 3, 4];
+array1.splice();
+//returns [], array1 = [1,2,3,4]
+array1.splice(1, 2);
+//returns [2,3], array1 = [1,4]
 
-var array1 = [1,2,3,4];
-array1.splice(); //returns [], array1 = [1,2,3,4]
-array1.splice(1,2,5,6,7); //returns [2,3],array1 = [1,5,6,7,4]
+var array1 = [1, 2, 3, 4];
+array1.splice();
+//returns [], array1 = [1,2,3,4]
+array1.splice(1, 2, 5, 6, 7);
+//returns [2,3],array1 = [1,5,6,7,4]
 
-array1 = [1,2,3,4];
-array1.splice(1,2,[5,6,7]);  //returns [2,3],  array1 = [1,[5,6,7],4]
-array1 = [1,2,3,4];
-array1.splice(1,2,{'ss':1}); //returns [2,3], array1 = [1,{'ss':1},4]
+array1 = [1, 2, 3, 4];
+array1.splice(1, 2, [5, 6, 7]);
+//returns [2,3],  array1 = [1,[5,6,7],4]
+array1 = [1, 2, 3, 4];
+array1.splice(1, 2, { ss: 1 });
+//returns [2,3], array1 = [1,{'ss':1},4]
 
 // --------------------------------------------------------------------.concat()
-var array1 = [1,2,3,4];
-array1.concat(); //returns [], array1 = [1,2,3,4]
-array1.concat([2,3,4]); //returns [1,2,3,4,2,3,4],array1 = [1,2,3,4,2,3,4]
+var array1 = [1, 2, 3, 4];
+array1.concat();
+//returns [], array1 = [1,2,3,4]
+array1.concat([2, 3, 4]);
+//returns [1,2,3,4,2,3,4],array1 = [1,2,3,4,2,3,4]
 
 // -------------------------------------------------------------.length Property
-var array1 = [1,2,3,4];
-console.log(array1.length); //prints 4
-array1.length = 3; // array1 = [1,2,3]
+var array1 = [1, 2, 3, 4];
+console.log(array1.length);
+// prints 4
+array1.length = 3;
+// array1 = [1,2,3]
 
 // --------------------------------------------------------------Spread operator
 function addFourNums(a, b, c, d) {
     return a + b + c + d;
 }
+
 var numbers = [1, 2, 3, 4];
-console.log(addFourNums(...numbers)); // 10
+console.log(addFourNums(...numbers));
+// 10
 
+var array1 = [1, 2, 3, 4, 5];
+Math.max.apply(null, array1);
+// 5
 
-var array1 = [1,2,3,4,5];
-Math.max.apply(null,array1); // 5
-
-var array2 = [3,2,-123,2132,12];
-Math.min.apply(null,array2); // -123
+var array2 = [3, 2, -123, 2132, 12];
+Math.min.apply(null, array2);
+// -123
 
 // ------------------FIND TWO ARRAY ELEMENTS IN AN ARRAY THAT ADD UP TO A NUMBER
 function findSum(arr, weight) {
-    for (var i=0,arrLength=arr.length; i<arrLength; i++){
-        for (var j=i+1; j<arrLength; j++) {
-            if (arr[i]+arr[j]==weight){
-                return [i,j];
+    for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
+        for (var j = i + 1; j < arrLength; j++) {
+            if (arr[i] + arr[j] == weight) {
+                return [i, j];
             }
         }
     }
     return -1;
 }
-findSum([1,2,3,4],5); // [ 0, 3 ]
 
-var arr = [1,2,3,4,5];
+findSum([1, 2, 3, 4], 5);
+// [ 0, 3 ]
+
+var arr = [1, 2, 3, 4, 5];
 var weight = 9;
 
 function findSumBetter(arr, weight) {
@@ -174,7 +209,9 @@ function findSumBetter(arr, weight) {
     }
     return -1;
 }
-findSumBetter([1, 2, 3, 4,5], 9); // [ 4, 3 ]
+
+findSumBetter([1, 2, 3, 4, 5], 9);
+// [ 4, 3 ]
 
 // ----------------------------IMPLEMENT THE ARRAY.SLICE() FUNCTION FROM SCRATCH
 function arraySlice(array, beginIndex, endIndex) {
@@ -183,8 +220,7 @@ function arraySlice(array, beginIndex, endIndex) {
         return array;
     }
     // If only beginning index is found, set endIndex to size
-    if (!endIndex)  
-        endIndex = array.length;
+    if (!endIndex) endIndex = array.length;
     var partArray = [];
     // If both begin and end index specified return the part of the array
     for (var i = beginIndex; i < endIndex; i++) {
@@ -192,8 +228,11 @@ function arraySlice(array, beginIndex, endIndex) {
     }
     return partArray;
 }
-arraySlice([1, 2, 3, 4], 1, 2); // [2]
-arraySlice([1, 2, 3, 4], 2, 4); // [3,4]
+
+arraySlice([1, 2, 3, 4], 1, 2);
+// [2]
+arraySlice([1, 2, 3, 4], 2, 4);
+// [3,4]
 
 // ------------------------FIND THE MEDIAN OF TWO SORTED ARRAYS OF THE SAME SIZE
 function medianOfArray(array) {
@@ -227,24 +266,40 @@ function medianOfTwoSortedArray(arr1, arr2, pos) {
         offsetMinus = Math.floor(pos / 2) - evenOffset,
         offsetPlus = pos - Math.floor(pos / 2) + evenOffset;
     if (median1 < median2) {
-        return medianOfTwoSortedArray(arr1.slice(offsetMinus), arr2.slice(0, -offsetMinus), offsetPlus);
+        return medianOfTwoSortedArray(
+            arr1.slice(offsetMinus),
+            arr2.slice(0, -offsetMinus),
+            offsetPlus
+        );
     } else {
-        return medianOfTwoSortedArray(arr2.slice(offsetMinus), arr1.slice(0, -offsetMinus), offsetPlus);
+        return medianOfTwoSortedArray(
+            arr2.slice(offsetMinus),
+            arr1.slice(0, -offsetMinus),
+            offsetPlus
+        );
     }
 }
 
-medianOfTwoSortedArray([1, 2, 3], [4, 5, 6], 3); // 3.5
-medianOfTwoSortedArray([11, 23, 24], [32, 33, 450], 3); // 28
-medianOfTwoSortedArray([1, 2, 3], [2, 3, 5], 3); // 2.5
+medianOfTwoSortedArray([1, 2, 3], [4, 5, 6], 3);
+// 3.5
+medianOfTwoSortedArray([11, 23, 24], [32, 33, 450], 3);
+// 28
+medianOfTwoSortedArray([1, 2, 3], [2, 3, 5], 3);
+// 2.5
 
 // --------------------------------------FIND COMMON ELEMENTS IN K-SORTED ARRAYS
 function commonElements(kArray) {
     var hashmap = {},
-        last, answer = [];
+        last,
+        answer = [];
     for (var i = 0, kArrayLength = kArray.length; i < kArrayLength; i++) {
         var currentArray = kArray[i];
         last = null;
-        for (var j = 0, currentArrayLen = currentArray.length; j < currentArrayLen; j++) {
+        for (
+            var j = 0, currentArrayLen = currentArray.length;
+            j < currentArrayLen;
+            j++
+        ) {
             var currentElement = currentArray[j];
             if (last != currentElement) {
                 if (!hashmap[currentElement]) {
@@ -268,62 +323,83 @@ function commonElements(kArray) {
 commonElements([
     [1, 2, 3],
     [1, 2, 3, 4],
-    [1, 2]
+    [1, 2],
 ]); // [ 1, 2 ]
 
 // --------------------------------------------------------------------------Map
-[1,2,3,4,5,6,7].map(function (value){
-    return value*10;
+[1, 2, 3, 4, 5, 6, 7].map(function (value) {
+    return value * 10;
 });
 // [10, 20, 30, 40, 50, 60, 70]
 
 // -----------------------------------------------------------------------Filter
-[100,2003,10,203,333,12].filter(function (value){
+[100, 2003, 10, 203, 333, 12].filter(function (value) {
     return value > 100;
 });
 // [2003, 203, 333]
 
 // -----------------------------------------------------------------------Reduce
-var sum = [0,1,2,3,4].reduce( function (prevVal, currentVal, index, array) {
+var sum = [0, 1, 2, 3, 4].reduce(function (prevVal, currentVal, index, array) {
     return prevVal + currentVal;
 }, 1);
-console.log(sum); // prints 11
+console.log(sum);
+// prints 11
 
 // ------------------------------------------------------Multidimensional Arrays
-function Matrix(rows, columns)  {
+function Matrix(rows, columns) {
     var jaggedarray = new Array(rows);
-    for (var i=0; i < columns; i +=1) {
-        jaggedarray[i]=new Array(rows);
+    for (var i = 0; i < columns; i += 1) {
+        jaggedarray[i] = new Array(rows);
     }
     return jaggedarray;
 }
-console.log(Matrix(3,3));
 
-var matrix3by3 = [[1,2,3],[4,5,6],[7,8,9]];
-matrix3by3[0]; // [1,2,3]
-matrix3by3[1]; // [4,5,6]
-matrix3by3[2]; // [7,8,9]
+console.log(Matrix(3, 3));
 
-matrix3by3[0][0]; // 1
-matrix3by3[0][1]; // 2
-matrix3by3[0][2]; // 3
+var matrix3by3 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
 
-matrix3by3[1][0]; // 4
-matrix3by3[1][1]; // 5
-matrix3by3[1][2]; // 6
-
-matrix3by3[2][0]; // 7
-matrix3by3[2][1]; // 8
-matrix3by3[2][2]; // 9
+matrix3by3[0];
+// [1,2,3]
+matrix3by3[1];
+// [4,5,6]
+matrix3by3[2];
+// [7,8,9]
+matrix3by3[0][0];
+// 1
+matrix3by3[0][1];
+// 2
+matrix3by3[0][2];
+// 3
+matrix3by3[1][0];
+// 4
+matrix3by3[1][1];
+// 5
+matrix3by3[1][2];
+// 6
+matrix3by3[2][0];
+// 7
+matrix3by3[2][1];
+// 8
+matrix3by3[2][2];
+// 9
 
 // -----------------------------------------------------------------SPIRAL PRINT
-var M = [ [1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20]];
+var M = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15],
+    [16, 17, 18, 19, 20],
+];
+
 function spiralPrint(M) {
     var topRow = 0,
         leftCol = 0,
         btmRow = M.length - 1,
         rightCol = M[0].length - 1;
-
     while (topRow < btmRow && leftCol < rightCol) {
         for (var col = 0; col <= rightCol; col++) {
             console.log(M[topRow][col]);
@@ -347,59 +423,74 @@ function spiralPrint(M) {
         }
     }
 }
+
 spiralPrint(M);
 
 // ------------------------------------------------------------TIC-TAC-TOE CHECK
-function checkRow ( rowArr, letter ) {
-    for ( var i=0; i < 3; i++) {
-        if (rowArr[i]!=letter) {
+function checkRow(rowArr, letter) {
+    for (var i = 0; i < 3; i++) {
+        if (rowArr[i] != letter) {
             return false;
         }
     }
     return true;
 }
 
-function checkColumn ( gameBoardMatrix, columnIndex, letter ) {
-    for ( var i=0; i < 3; i++) {
-        if (gameBoardMatrix[i][columnIndex]!=letter) {
+function checkColumn(gameBoardMatrix, columnIndex, letter) {
+    for (var i = 0; i < 3; i++) {
+        if (gameBoardMatrix[i][columnIndex] != letter) {
             return false;
         }
     }
     return true;
 }
 
-function ticTacToeWinner ( gameBoardMatrix, letter) {
+function ticTacToeWinner(gameBoardMatrix, letter) {
     // Check rows
-    var rowWin = checkRow(gameBoardMatrix[0], letter)
-        || checkRow(gameBoardMatrix[1], letter)
-        || checkRow(gameBoardMatrix[2], letter);
-    var colWin = checkColumn(gameBoardMatrix, 0, letter)
-        || checkColumn(gameBoardMatrix, 1, letter)
-        || checkColumn(gameBoardMatrix, 2, letter);
-    var diagonalWinLeftToRight = (gameBoardMatrix[0][0]==letter && gameBoardMatrix[1][1]==letter && gameBoardMatrix[2][2]==letter);
-    var diagonalWinRightToLeft = (gameBoardMatrix[0][2]==letter && gameBoardMatrix[1][1]==letter && gameBoardMatrix[2][0]==letter);
+    var rowWin =
+        checkRow(gameBoardMatrix[0], letter) ||
+        checkRow(gameBoardMatrix[1], letter) ||
+        checkRow(gameBoardMatrix[2], letter);
+    var colWin =
+        checkColumn(gameBoardMatrix, 0, letter) ||
+        checkColumn(gameBoardMatrix, 1, letter) ||
+        checkColumn(gameBoardMatrix, 2, letter);
+    var diagonalWinLeftToRight =
+        gameBoardMatrix[0][0] == letter &&
+        gameBoardMatrix[1][1] == letter &&
+        gameBoardMatrix[2][2] == letter;
+    var diagonalWinRightToLeft =
+        gameBoardMatrix[0][2] == letter &&
+        gameBoardMatrix[1][1] == letter &&
+        gameBoardMatrix[2][0] == letter;
     return rowWin || colWin || diagonalWinLeftToRight || diagonalWinRightToLeft;
 }
 
-var board = [['O','-','X'],['-','O','-'],['-','X','O']];
-ticTacToeWinner(board, 'X'); // false
-ticTacToeWinner(board, 'O'); // true
+var board = [
+    ["O", "-", "X"],
+    ["-", "O", "-"],
+    ["-", "X", "O"],
+];
+ticTacToeWinner(board, "X");
+// false
+ticTacToeWinner(board, "O");
+// true
 
 // -----------------------------------------------------------------PATH FINDING
-var board =
-    `%e%%%%%%%%%\n
+var board = `%e%%%%%%%%%\n
 %...%.%...%\n
 %.%.%.%.%%%\n
 %.%.......%\n
 %.%%%%.%%.%\n
 %.%.....%.%\n
-%%%%%%%%%x%`
+%%%%%%%%%x%`;
 
 var rows = board.split("\n");
 
 function generateColumnArr(arr) {
     return arr.split("");
 }
+
 var mazeMatrix = rows.map(generateColumnArr);
 
 function findChar(char, mazeMatrix) {
@@ -430,8 +521,8 @@ function printMatrix(matrix) {
 function mazePathFinder(mazeMatrix) {
     var row = mazeMatrix.length,
         column = mazeMatrix[0].length,
-        startPos = findChar('e', mazeMatrix),
-        endPos = findChar('x', mazeMatrix);
+        startPos = findChar("e", mazeMatrix),
+        endPos = findChar("x", mazeMatrix);
     path(startPos[0], startPos[1]);
 
     function path(x, y) {
@@ -442,16 +533,21 @@ function mazePathFinder(mazeMatrix) {
         if (x == endPos[0] && y == endPos[1]) {
             return true;
         }
-        if (mazeMatrix[x][y] == '%' || mazeMatrix[x][y] == '+') {
+        if (mazeMatrix[x][y] == "%" || mazeMatrix[x][y] == "+") {
             return false;
         }
         // Mark the current spot
-        mazeMatrix[x][y] = '+';
+        mazeMatrix[x][y] = "+";
         printMatrix(mazeMatrix);
-        if (path(x, y - 1) || path(x + 1, y) || path(x, y + 1) || path(x - 1, y)) {
+        if (
+            path(x, y - 1) ||
+            path(x + 1, y) ||
+            path(x, y + 1) ||
+            path(x - 1, y)
+        ) {
             return true;
         }
-        mazeMatrix[x][y] = '.';
+        mazeMatrix[x][y] = ".";
         return false;
     }
 }
@@ -462,7 +558,7 @@ mazePathFinder(mazeMatrix);
 var matrix = [
     [1, 0, 1],
     [0, 0, 1],
-    [1, 1, 1]
+    [1, 1, 1],
 ];
 rotateMatrix90Left(matrix);
 
@@ -487,4 +583,5 @@ function rotateMatrix90Left(mat) {
     }
 }
 
-console.log(matrix); // [[1,1,1],[0,0,1],[1,0,1]]
+console.log(matrix);
+// [[1,1,1],[0,0,1],[1,0,1]]
