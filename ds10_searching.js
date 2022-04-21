@@ -73,10 +73,12 @@ function sqrtInt(number) {
         let mid = parseInt((start + end) / 2);
         if (mid * mid == number) return mid;
         if (mid * mid < number) {
-            start = mid + 1; // use the upper section
+            start = mid + 1;
+            // use the upper section
             ans = mid;
         } else {
-            end = mid - 1; // use the lower section
+            end = mid - 1;
+            // use the lower section
         }
     }
     return ans;
@@ -102,7 +104,8 @@ function sqrtDouble(number) {
     return middle;
 }
 
-sqrtDouble(9); // 3.0234375
+sqrtDouble(9);
+// 3.0234375
 
 // --------------------FIND IF TWO ELEMENTS OF AN ARRAY ADD UP TO A GIVEN NUMBER
 function findTwoSum(array, sum) {
